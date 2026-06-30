@@ -1,0 +1,8 @@
+{
+    "python.testing.pytestArgs": [
+        "days_7"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "materialkv.pythonFile": "main.py"
+}
