@@ -1,0 +1,17 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <h1>Bienvenue sur {{name}}</h1>
+  <p>
+    Cette application nettoie les textes et analyse le nombre de mots, de caractères et
+    les mots les plus fréquents dans le texte. Essayez-la en cliquant sur analyseur de texte dans le
+    menu. Vous avez besoin des technologies suivantes pour construire cette application web :
+  </p>
+  <ul class="tech-lists">
+    {% for tech in techs %}
+    <li class="tech">{{tech}}</li>
+
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
