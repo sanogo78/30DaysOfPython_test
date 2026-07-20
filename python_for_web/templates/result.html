@@ -1,0 +1,37 @@
+{% extends 'layout.html' %} 
+{% block content %}
+<div class="container">
+     <h1>Résultat de l'analyse du texte</h1>
+    <div class="result-header">
+        <p>Nombre total de mots: <em>{{ word_count }}</em></p>
+        <p>Nombre de caractères: <em>{{ char_count }}</em></p>
+        <p>Mot le plus frequent: <em>{{ most_frequent_word }}</em></p>
+        <p>La variété de mots (densité lexicale): <em>{{ word_variety }} %</em></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Mots</th>
+                <th>Nombre de fois</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mot, compte in top_mots %}
+            <tr>
+                <td><strong>{{ mot }}</strong></td>
+                <td>{{ compte }} fois</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="2">Aucune donnée à analyser.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="result-actions">
+        <a href="{{ url_for('post') }}" class="button">Nouvelle analyse</a>
+    </div>
+</div>
+{% endblock %}
