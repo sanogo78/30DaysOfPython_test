@@ -10,3 +10,4 @@ from datetime import datetime
 # print(dir(Flask))
 # help(Flask.add_url_rule)
 # print(dir(pymongo))
+mongokey = "mongodb+srv://sanogomadou018_db_user:Kv8UrpvgV5ONc90b@cluster0.impcxnk.mongodb.net/"

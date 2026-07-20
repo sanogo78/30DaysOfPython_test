@@ -10,8 +10,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Disable caching for static files
-MONGODB_URI = "mongodb+srv://sanogomadou018_db_user:Kv8UrpvgV5ONc90b@cluster0.impcxnk.mongodb.net/"
-client = pymongo.MongoClient(MONGODB_URI)
+MONGODB_URI = "adresse mongo db"
 # print(client.list_database_names())
 
 # Creation de la base de données et de la collection
